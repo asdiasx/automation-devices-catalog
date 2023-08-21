@@ -3,5 +3,12 @@
 <br />
 <span>{{ title }} app is running!</span>
 <br />
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<br />
+<button type="button" (click)="isUnchanged = !isUnchanged">
+  Toggle Status
+</button>
+<br />
+<button type="button" [disabled]="isUnchanged">Save</button>
 <br />
 <app-footer></app-footer>
