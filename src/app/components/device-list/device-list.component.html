@@ -1,0 +1,17 @@
+<h2>Dispositivos</h2>
+
+<div *ngFor="let device of devices">
+  <h3>
+    <a
+      [title]="device.name + ' descrição'"
+      [routerLink]="['/devices', device.id]"
+    >
+      {{ device.name }}
+    </a>
+  </h3>
+  <p>Tipo de dispositivo: {{ device.type }}</p>
+  <app-select-device
+    [device]="device"
+    (updateStatus)="onSelect(device, $event)"
+  ></app-select-device>
+</div>
