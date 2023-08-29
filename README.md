@@ -10,9 +10,9 @@ O frontend da aplicação é desenvolvido com Angular e o backend é simulado pe
 
 [https://github.com/asdiasx/automation-devices-catalog](https://github.com/asdiasx/automation-devices-catalog)
 
-## [](https://github.com/utfpr-gp/roubank-app/blob/master/README.md#prot%C3%B3tipo)Protótipo
+## Protótipo
 
-[https://www.figma.com/file/a1VDbO1aNfZyulQPxT99OE/beleza-em-dia?node-id=3%3A80](https://www.figma.com/file/a1VDbO1aNfZyulQPxT99OE/beleza-em-dia?node-id=3%3A80)
+[Link para o protótipo no Figma](https://www.figma.com/file/213t22ANCcS5HWd8ZTy3ZZ/Automagic?type=design&node-id=1%3A2&mode=design&t=Y2zApc6BA09CQFqg-1)
 
 ## [](https://github.com/utfpr-gp/roubank-app/blob/master/README.md#checklist)Checklist
 
