@@ -1,0 +1,16 @@
+mat-form-field {
+  width: 100%;
+}
+
+fieldset > div {
+  margin: 5px;
+}
+
+.form {
+  margin-top: 15vh;
+}
+
+button {
+  width: 100px;
+  margin: 0 20px;
+}

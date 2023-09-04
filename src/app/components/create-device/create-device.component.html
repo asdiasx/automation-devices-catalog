@@ -1,0 +1,74 @@
+<div class="container form">
+  <h1 class="d-flex justify-content-center m-4">{{ title }}</h1>
+
+  <form [formGroup]="deviceForm">
+    <fieldset>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input
+              matInput
+              formControlName="name"
+              [matTooltip]="getErrorMessage('name')"
+            />
+            <mat-error>Deve ser um nome válido.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Tipo</mat-label>
+            <input
+              matInput
+              formControlName="type"
+              [matTooltip]="getErrorMessage('type')"
+            />
+            <mat-error>Deve ser um tipo válido.</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Localização</mat-label>
+            <input
+              matInput
+              formControlName="location"
+              [matTooltip]="getErrorMessage('location')"
+            />
+            <mat-error>Deve ser uma localização válida.</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Descrição</mat-label>
+            <input
+              matInput
+              formControlName="description"
+              [matTooltip]="getErrorMessage('description')"
+            />
+            <mat-error>Deve ter no máximo 100 caracteres.</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </fieldset>
+    <div class="d-flex justify-content-center p-2">
+      <button mat-flat-button (click)="onCancel()" type="button">Voltar</button>
+      <button
+        mat-flat-button
+        (click)="onSubmit()"
+        [disabled]="deviceForm.invalid"
+        color="primary"
+        cdkFocusInitial
+        type="button"
+      >
+        Salvar
+      </button>
+    </div>
+  </form>
+</div>
+<div>
+  <p>Device salvo no Web Storage: {{ savedDevice }}</p>
+</div>
