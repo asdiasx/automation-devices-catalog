@@ -21,7 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SelectDeviceComponent } from './components/select-device/select-device.component';
 import { CreateDeviceComponent } from './components/create-device/create-device.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +47,7 @@ import { CreateDeviceComponent } from './components/create-device/create-device.
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
