@@ -1,0 +1,11 @@
+{
+  "devices": [
+    {
+      "id": "1",
+      "name": "My Device",
+      "type": "light",
+      "location": "Living Room",
+      "description": "This is my device"
+    }
+  ]
+}
