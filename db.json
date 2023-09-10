@@ -20,6 +20,13 @@
       "type": "lampada",
       "localization": "varanda",
       "description": "Lampada na varanda da chacara"
+    },
+    {
+      "id": "LugFKs3",
+      "name": "device2_db",
+      "type": "switch",
+      "localization": "hall",
+      "description": "chave no hall principal"
     }
   ]
 }

@@ -9,7 +9,8 @@ import { DeviceRequisitionService } from 'src/app/services/device-requisition.se
   styleUrls: ['./device-list.component.css'],
 })
 export class DeviceListComponent implements OnInit {
-  // devices: Device[] = [];
+  // devices: Device[] = [...devices];
+  devices?: Device[];
 
   constructor(private deviceRequisitionService: DeviceRequisitionService) {}
 
@@ -20,7 +21,6 @@ export class DeviceListComponent implements OnInit {
       }`
     );
   }
-  devices?: Device[];
 
   ngOnInit(): void {
     this.deviceRequisitionService
@@ -29,7 +29,7 @@ export class DeviceListComponent implements OnInit {
         this.devices = devices;
       })
       .catch((error) => {
-        console.error('Erro carregando dados', error);
+        console.error('Erro carregando dados ', error);
       });
   }
 }

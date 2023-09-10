@@ -1,9 +1,9 @@
 <h2>Detalhes do dispositivo</h2>
 
 <div *ngIf="device">
-  <h3>{{ device.name }}</h3>
-  <h4>{{ device.type }}</h4>
-  <h4>{{ device.localization }}</h4>
-  <p>{{ device.description }}</p>
+  <h3>Nome: {{ device.name }}</h3>
+  <h4>Tipo: {{ device.type }}</h4>
+  <h4>Localização: {{ device.localization }}</h4>
+  <h4>Descrição: {{ device.description }}</h4>
 </div>
 <button type="button" (click)="onBackToList()">Voltar</button>

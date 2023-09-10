@@ -20,12 +20,12 @@ export class DeviceRequisitionService {
     return lastValueFrom(devicesFound);
   }
 
-  getDeviceByName(name: string): Promise<Device> {
-    const deviceFound = this.http.get<Device>(`${this.URL}?name=${name}`);
+  getDeviceByName(name: string): Promise<Device[]> {
+    const deviceFound = this.http.get<Device[]>(`${this.URL}?name=${name}`);
     return lastValueFrom(deviceFound);
   }
 
-  saveDevice(device: any): Promise<Device> {
+  saveDevice(device: Device): Promise<Device> {
     const deviceSaved = this.http.post<Device>(
       this.URL,
       device,
@@ -34,7 +34,7 @@ export class DeviceRequisitionService {
     return lastValueFrom(deviceSaved);
   }
 
-  updateDevice(device: any): Promise<Device> {
+  updateDevice(device: Device): Promise<Device> {
     const deviceUpdated = this.http.put<Device>(
       `${this.URL}/${device.id}`,
       device,
@@ -43,7 +43,7 @@ export class DeviceRequisitionService {
     return lastValueFrom(deviceUpdated);
   }
 
-  deleteDevice(device: any): Promise<Device> {
+  deleteDevice(device: Device): Promise<Device> {
     const deviceDeleted = this.http.delete<Device>(
       `${this.URL}/${device.id}`,
       this.httpOptions

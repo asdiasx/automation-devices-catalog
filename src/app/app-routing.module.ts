@@ -10,7 +10,7 @@ import { CreateDeviceComponent } from './components/create-device/create-device.
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: DeviceListComponent },
   { path: 'new', component: CreateDeviceComponent },
-  { path: 'devices/:deviceId', component: DeviceDetailsComponent },
+  { path: 'devices/:deviceName', component: DeviceDetailsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'home', redirectTo: '' },
   { path: '**', component: NotFoundComponent },
