@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DeviceRequisitionService } from 'src/app/services/device-requisition.service';
 import { DeviceService } from 'src/app/services/device.service';
 import { Constants } from 'src/app/utils/constants';
 
@@ -22,7 +23,8 @@ export class CreateDeviceComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private deviceService: DeviceService
+    private deviceService: DeviceService,
+    private deviceRequisitionService: DeviceRequisitionService
   ) {}
 
   ngOnInit(): void {
@@ -65,6 +67,7 @@ export class CreateDeviceComponent implements OnInit {
 
   onSubmit() {
     this.deviceService.create(this.deviceForm.getRawValue());
+    this.deviceRequisitionService.saveDevice(this.deviceForm.getRawValue());
     this.savedDevice = this.deviceService.getDevice(Constants.DEVICE_KEY);
     this.deviceForm.reset();
   }

@@ -13,6 +13,13 @@
       "type": "switch",
       "location": "Living Room",
       "description": "This is my switch device on living room"
+    },
+    {
+      "id": "-8r9os_",
+      "name": "device_db",
+      "type": "lampada",
+      "location": "varanda",
+      "description": "Lampada na varanda da chacara"
     }
   ]
 }
