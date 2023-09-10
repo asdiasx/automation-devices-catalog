@@ -2,10 +2,17 @@
   "devices": [
     {
       "id": "1",
-      "name": "My Device",
+      "name": "My Device 1",
       "type": "light",
       "location": "Living Room",
-      "description": "This is my device"
+      "description": "This is my light device on living room"
+    },
+    {
+      "id": "2",
+      "name": "My Device 2",
+      "type": "switch",
+      "location": "Living Room",
+      "description": "This is my switch device on living room"
     }
   ]
 }
