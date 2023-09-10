@@ -15,9 +15,13 @@ export class DeviceRequisitionService {
 
   constructor(private http: HttpClient) {}
 
-  getDevices(): Promise<Device> {
-    const devices = this.http.get<Device>(this.URL);
-    return lastValueFrom(devices);
+  getDevices(): Promise<Device[]> {
+    return new Promise<Device[]>((resolve, reject) => {
+      this.http.get<Device[]>(this.URL).subscribe({
+        next: (data) => resolve(data),
+        error: (error) => reject(error),
+      });
+    });
   }
 
   getDeviceByName(name: string): Promise<Device> {

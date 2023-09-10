@@ -4,21 +4,21 @@
       "id": "1",
       "name": "My Device 1",
       "type": "light",
-      "location": "Living Room",
+      "localization": "Living Room",
       "description": "This is my light device on living room"
     },
     {
       "id": "2",
       "name": "My Device 2",
       "type": "switch",
-      "location": "Living Room",
+      "localization": "Living Room",
       "description": "This is my switch device on living room"
     },
     {
       "id": "-8r9os_",
       "name": "device_db",
       "type": "lampada",
-      "location": "varanda",
+      "localization": "varanda",
       "description": "Lampada na varanda da chacara"
     }
   ]
