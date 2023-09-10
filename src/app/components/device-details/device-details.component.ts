@@ -13,7 +13,7 @@ export class DeviceDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) {}
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;
-    const deviceIdFromRoute = Number(routeParams.get('deviceId'));
+    const deviceIdFromRoute = routeParams.get('deviceId');
 
     this.device = devices.find((product) => product.id === deviceIdFromRoute);
   }

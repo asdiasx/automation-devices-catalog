@@ -42,7 +42,7 @@ export class CreateDeviceComponent implements OnInit {
         Validators.required,
         Validators.pattern('[\\w\\p{L}.]{4,10}'),
       ]),
-      location: new FormControl(null, [
+      localization: new FormControl(null, [
         Validators.required,
         Validators.pattern('[\\w\\p{L}.]{4,20}'),
       ]),
