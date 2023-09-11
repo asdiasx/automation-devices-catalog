@@ -4,6 +4,6 @@
   <h3>Nome: {{ device.name }}</h3>
   <h4>Tipo: {{ device.type }}</h4>
   <h4>Localização: {{ device.localization }}</h4>
-  <h4>Descrição: {{ device.description }}</h4>
+  <h4 *ngIF="device.description">Descrição: {{ device.description }}</h4>
 </div>
 <button type="button" (click)="onBackToList()">Voltar</button>

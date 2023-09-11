@@ -27,6 +27,13 @@
       "type": "switch",
       "localization": "hall",
       "description": "chave no hall principal"
+    },
+    {
+      "id": "VRZ7Ara",
+      "name": "dev_desc_vazia",
+      "type": "fake_disp",
+      "localization": "casa",
+      "description": null
     }
   ]
 }
