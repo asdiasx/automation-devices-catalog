@@ -6,7 +6,7 @@
       [title]="device.name + ' descrição'"
       [routerLink]="['/devices', device.name]"
     >
-      {{ device.name }}
+      {{ device.name | uppercase }}
     </a>
   </h3>
   <p>Tipo de dispositivo: {{ device.type }}</p>
