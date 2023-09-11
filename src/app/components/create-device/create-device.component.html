@@ -69,6 +69,11 @@
     </div>
   </form>
 </div>
-<div>
-  <p>Device salvo no Web Storage: {{ savedDevice }}</p>
+<div *ngIf="savedDevice">
+  <h4>Device salvo no banco de dados:</h4>
+  <p>
+    id: {{ savedDevice.id }} - nome: {{ savedDevice.name }} - tipo:
+    {{ savedDevice.type }} - localização: {{ savedDevice.localization }} -
+    descrição: {{ savedDevice.description }}
+  </p>
 </div>

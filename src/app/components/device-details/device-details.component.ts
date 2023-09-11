@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Device } from 'src/app/models/device';
 import { DeviceRequisitionService } from 'src/app/services/device-requisition.service';
-// import { Device, devices } from 'src/app/devices';
 
 @Component({
   selector: 'app-device-details',
@@ -20,14 +19,11 @@ export class DeviceDetailsComponent implements OnInit {
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;
     const deviceNameFromRoute = routeParams.get('deviceName') || '';
-    // this.device = devices.find((product) => product.id === deviceIdFromRoute);
     this.deviceRequisitionService
       .getDeviceByName(deviceNameFromRoute)
-      .then((deviceFromAPI) => {
-        this.device = deviceFromAPI.at(0);
-      })
-      .catch((error) => {
-        console.error('Erro carregando dados ', error);
+      .subscribe({
+        next: (devices) => (this.device = devices.at(0)),
+        error: (error) => console.log('Erro ao buscar dados ', error),
       });
   }
 

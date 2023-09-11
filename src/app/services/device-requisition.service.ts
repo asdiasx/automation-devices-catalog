@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Device } from '../models/device';
-import { lastValueFrom } from 'rxjs';
+import { Observable, lastValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -15,39 +15,30 @@ export class DeviceRequisitionService {
 
   constructor(private http: HttpClient) {}
 
-  getDevices(): Promise<Device[]> {
-    const devicesFound = this.http.get<Device[]>(this.URL);
-    return lastValueFrom(devicesFound);
+  getDevices(): Observable<Device[]> {
+    return this.http.get<Device[]>(this.URL);
   }
 
-  getDeviceByName(name: string): Promise<Device[]> {
-    const deviceFound = this.http.get<Device[]>(`${this.URL}?name=${name}`);
-    return lastValueFrom(deviceFound);
+  getDeviceByName(name: string): Observable<Device[]> {
+    return this.http.get<Device[]>(`${this.URL}?name=${name}`);
   }
 
-  saveDevice(device: Device): Promise<Device> {
-    const deviceSaved = this.http.post<Device>(
-      this.URL,
-      device,
-      this.httpOptions
-    );
-    return lastValueFrom(deviceSaved);
+  saveDevice(device: Device): Observable<Device> {
+    return this.http.post<Device>(this.URL, device, this.httpOptions);
   }
 
-  updateDevice(device: Device): Promise<Device> {
-    const deviceUpdated = this.http.put<Device>(
+  updateDevice(device: Device): Observable<Device> {
+    return this.http.put<Device>(
       `${this.URL}/${device.id}`,
       device,
       this.httpOptions
     );
-    return lastValueFrom(deviceUpdated);
   }
 
-  deleteDevice(device: Device): Promise<Device> {
-    const deviceDeleted = this.http.delete<Device>(
+  deleteDevice(device: Device): Observable<Device> {
+    return this.http.delete<Device>(
       `${this.URL}/${device.id}`,
       this.httpOptions
     );
-    return lastValueFrom(deviceDeleted);
   }
 }

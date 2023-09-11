@@ -34,6 +34,27 @@
       "type": "fake_disp",
       "localization": "casa",
       "description": null
+    },
+    {
+      "id": "ahzW7Pf",
+      "name": "teste33",
+      "type": "newtype",
+      "localization": "here",
+      "description": "lorem ipsum dorna"
+    },
+    {
+      "id": "Dzf9Vbc",
+      "name": "teste66",
+      "type": "tipo66",
+      "localization": "ala66",
+      "description": "um dispositivo 66"
+    },
+    {
+      "id": "6LocgKL",
+      "name": "teste100",
+      "type": "tipo100",
+      "localization": "ala100",
+      "description": "dispositivo do tipo 100"
     }
   ]
 }

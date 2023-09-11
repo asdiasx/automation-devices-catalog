@@ -23,13 +23,9 @@ export class DeviceListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.deviceRequisitionService
-      .getDevices()
-      .then((devices) => {
-        this.devices = devices;
-      })
-      .catch((error) => {
-        console.error('Erro carregando dados ', error);
-      });
+    this.deviceRequisitionService.getDevices().subscribe({
+      next: (devices) => (this.devices = devices),
+      error: (error) => console.log('Erro ao buscar dados ', error),
+    });
   }
 }

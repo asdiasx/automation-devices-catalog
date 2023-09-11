@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Device } from 'src/app/models/device';
 import { DeviceRequisitionService } from 'src/app/services/device-requisition.service';
 import { DeviceService } from 'src/app/services/device.service';
 import { Constants } from 'src/app/utils/constants';
@@ -18,7 +19,7 @@ export class CreateDeviceComponent implements OnInit {
 
   public deviceForm!: FormGroup;
 
-  public savedDevice?: string | undefined;
+  public savedDevice?: Device | undefined;
 
   constructor(
     private router: Router,
@@ -66,9 +67,12 @@ export class CreateDeviceComponent implements OnInit {
   }
 
   onSubmit() {
-    this.deviceService.create(this.deviceForm.getRawValue());
-    this.deviceRequisitionService.saveDevice(this.deviceForm.getRawValue());
-    this.savedDevice = this.deviceService.getDevice(Constants.DEVICE_KEY);
+    this.deviceRequisitionService
+      .saveDevice(this.deviceForm.getRawValue())
+      .subscribe({
+        next: (device) => (this.savedDevice = device),
+        error: (error) => console.log('Erro ao salvar dados ', error),
+      });
     this.deviceForm.reset();
   }
   onCancel(): void {
