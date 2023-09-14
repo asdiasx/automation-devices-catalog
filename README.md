@@ -26,13 +26,13 @@ O frontend da aplicação é desenvolvido com Angular e o backend é simulado pe
 - [x] Mapear componentes à rotas no módulo de rotas.
 - [x] Criar navegação entre páginas por meio de rotas.
 - [x] Passar dados entre componentes que representam diferentes telas via parâmetros de rotas.
-- [ ] Validar campos do formulário com REGEX e apresentar os erros.
-- [ ] Desabilitar o botão de submit enquanto o formulário está inválido.
-- [ ] Fazer requisições a API com tratamento da resposta com Promises ou Observables.
-- [ ] Cadastrar uma entidade no JSON Server.
+- [x] Validar campos do formulário com REGEX e apresentar os erros.
+- [x] Desabilitar o botão de submit enquanto o formulário está inválido.
+- [x] Fazer requisições a API com tratamento da resposta com Promises ou Observables.
+- [x] Cadastrar uma entidade no JSON Server.
 - [x] Apresentar uma lista de dados com a diretiva estrutural ngFor.
-- [ ] Usar a diretiva ngIf
-- [ ] Formatar a apresentação de dados com Pipes.
+- [x] Usar a diretiva ngIf
+- [x] Formatar a apresentação de dados com Pipes.
 - [ ] Build e deploy da aplicação.
 
 ## [](https://github.com/utfpr-gp/roubank-app/blob/master/README.md#manual-de-execu%C3%A7%C3%A3o)Manual de execução
