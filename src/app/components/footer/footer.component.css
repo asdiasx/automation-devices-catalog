@@ -1,18 +1,14 @@
 footer {
   background-color: #1e1e1e;
   color: white;
-  /* text-align: center; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* padding: 2%; */
-  position: fixed;
-  left: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
 }
 
 .git-logo {

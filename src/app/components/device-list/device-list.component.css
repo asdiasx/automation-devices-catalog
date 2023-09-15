@@ -1,15 +1,24 @@
-.wrapper {
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.list-wrapper {
   overflow: auto;
   width: 90vw;
-  height: 40vh;
-  border: 1px solid black;
-  border-radius: 15px;
-  margin: auto;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  height: 70vh;
+  margin-top: 36px;
 }
 
 .dev-item {
@@ -29,7 +38,7 @@
   text-align: left;
 }
 
-h3 {
+h4 {
   width: 200px;
   margin: 0;
   padding: 0;

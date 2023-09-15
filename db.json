@@ -13,48 +13,6 @@
       "type": "switch",
       "localization": "Living Room",
       "description": "This is my switch device on living room"
-    },
-    {
-      "id": "VRZ7Ara",
-      "name": "dev_desc_vazia",
-      "type": "fake_disp",
-      "localization": "casa",
-      "description": null
-    },
-    {
-      "id": "ahzW7Pf",
-      "name": "teste33",
-      "type": "newtype",
-      "localization": "here",
-      "description": "lorem ipsum dorna"
-    },
-    {
-      "id": "E_MihYB",
-      "name": "dispositivo66",
-      "type": "meutipo66",
-      "localization": "aqui_e_la",
-      "description": "minha descrição"
-    },
-    {
-      "id": "CehS4pO",
-      "name": "dispositivo120",
-      "type": "switch",
-      "localization": "apartamento",
-      "description": "Meu dispositivo na sala"
-    },
-    {
-      "id": "XnJtUuF",
-      "name": "teste4",
-      "type": "teste",
-      "localization": "testando",
-      "description": "testado"
-    },
-    {
-      "id": "2aUhvWu",
-      "name": "tttttt",
-      "type": "ttttt",
-      "localization": "ttttt",
-      "description": "ttttt"
     }
   ]
 }

@@ -1,18 +1,19 @@
-<div layout="row" layout-wrap>
-  <h2>Dispositivos</h2>
-
-  <h5>* Clique no nome para detalhes</h5>
-  <div class="wrapper">
+<div class="container">
+  <div class="page-title">
+    <h1>Dispositivos</h1>
+    <p>* Clique no nome para detalhes</p>
+  </div>
+  <div class="list-wrapper">
     <div *ngFor="let device of devices">
       <div class="dev-item">
-        <h3>
+        <h4>
           <a
             [title]="'Tipo: ' + device.type"
             [routerLink]="['/devices', device.id]"
           >
             {{ device.name | uppercase }}
           </a>
-        </h3>
+        </h4>
         <p class="info">Localização: {{ device.localization }}</p>
         <div class="actions">
           <button

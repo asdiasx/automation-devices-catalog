@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 36px;
+}
+
+dt {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+dd {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100px;
+  margin: 20px;
+}
