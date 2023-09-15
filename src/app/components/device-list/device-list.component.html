@@ -1,17 +1,32 @@
-<h2>Dispositivos (clique no nome para detalhar)</h2>
+<div layout="row" layout-wrap>
+  <h2>Dispositivos</h2>
 
-<div *ngFor="let device of devices">
-  <h3>
-    <a
-      [title]="device.name + ' descrição'"
-      [routerLink]="['/devices', device.name]"
-    >
-      {{ device.name | uppercase }}
-    </a>
-  </h3>
-  <p>Tipo de dispositivo: {{ device.type }}</p>
-  <app-select-device
-    [device]="device"
-    (updateStatus)="onSelect(device, $event)"
-  ></app-select-device>
+  <h5>* Clique no nome para detalhes</h5>
+  <div class="wrapper">
+    <div *ngFor="let device of devices">
+      <div class="dev-item">
+        <h3>
+          <a
+            [title]="'Tipo: ' + device.type"
+            [routerLink]="['/devices', device.id]"
+          >
+            {{ device.name | uppercase }}
+          </a>
+        </h3>
+        <p class="info">Localização: {{ device.localization }}</p>
+        <div class="actions">
+          <button
+            mat-icon-button
+            color="primary"
+            routerLink="/devices/{{ device.id }}/edit"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="onDelete(device)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

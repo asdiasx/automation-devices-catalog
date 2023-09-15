@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -19,7 +20,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { DeviceDetailsComponent } from './components/device-details/device-details.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { SelectDeviceComponent } from './components/select-device/select-device.component';
 import { CreateDeviceComponent } from './components/create-device/create-device.component';
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
@@ -31,7 +31,6 @@ import { HttpClientModule } from '@angular/common/http';
     DeviceDetailsComponent,
     AboutComponent,
     NotFoundComponent,
-    SelectDeviceComponent,
     CreateDeviceComponent,
   ],
   imports: [
@@ -41,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatSlideToggleModule,
     MatCheckboxModule,
     MatFormFieldModule,
+    MatToolbarModule,
     MatTooltipModule,
     MatButtonModule,
     MatInputModule,

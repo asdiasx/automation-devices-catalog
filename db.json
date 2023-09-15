@@ -15,20 +15,6 @@
       "description": "This is my switch device on living room"
     },
     {
-      "id": "-8r9os_",
-      "name": "device_db",
-      "type": "lampada",
-      "localization": "varanda",
-      "description": "Lampada na varanda da chacara"
-    },
-    {
-      "id": "LugFKs3",
-      "name": "device2_db",
-      "type": "switch",
-      "localization": "hall",
-      "description": "chave no hall principal"
-    },
-    {
       "id": "VRZ7Ara",
       "name": "dev_desc_vazia",
       "type": "fake_disp",
@@ -43,18 +29,32 @@
       "description": "lorem ipsum dorna"
     },
     {
-      "id": "Dzf9Vbc",
-      "name": "teste66",
-      "type": "tipo66",
-      "localization": "ala66",
-      "description": "um dispositivo 66"
+      "id": "E_MihYB",
+      "name": "dispositivo66",
+      "type": "meutipo66",
+      "localization": "aqui_e_la",
+      "description": "minha descrição"
     },
     {
-      "id": "6LocgKL",
-      "name": "teste100",
-      "type": "tipo100",
-      "localization": "ala100",
-      "description": "dispositivo do tipo 100"
+      "id": "CehS4pO",
+      "name": "dispositivo120",
+      "type": "switch",
+      "localization": "apartamento",
+      "description": "Meu dispositivo na sala"
+    },
+    {
+      "id": "XnJtUuF",
+      "name": "teste4",
+      "type": "teste",
+      "localization": "testando",
+      "description": "testado"
+    },
+    {
+      "id": "2aUhvWu",
+      "name": "tttttt",
+      "type": "ttttt",
+      "localization": "ttttt",
+      "description": "ttttt"
     }
   ]
 }

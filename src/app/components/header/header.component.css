@@ -1,8 +1,7 @@
-header {
-  background-color: black;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.example-spacer {
+  flex: 1 1 auto;
 }
+
 nav ul {
   list-style: none;
   margin: 0;
@@ -15,12 +14,18 @@ nav ul li {
 }
 
 nav ul li a {
+  color: rgb(249, 199, 96);
   text-decoration: none;
-  color: white;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: grey;
+  color: rgb(247, 150, 113);
+}
+
+.main-logo {
+  width: 180px;
+  margin-right: 5px;
+  border-radius: 8px;
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { first } from 'rxjs';
 import { Device } from 'src/app/models/device';
-// import { devices } from '../../devices';
 import { DeviceRequisitionService } from 'src/app/services/device-requisition.service';
 
 @Component({
@@ -9,23 +9,32 @@ import { DeviceRequisitionService } from 'src/app/services/device-requisition.se
   styleUrls: ['./device-list.component.css'],
 })
 export class DeviceListComponent implements OnInit {
-  // devices: Device[] = [...devices];
+  public onDelete(device: Device): void {
+    this.deviceRequisitionService
+      .deleteDevice(device)
+      .pipe(first())
+      .subscribe({
+        error: (err) => {
+          console.log(err);
+        },
+        complete: () => {
+          this.getDevices();
+        },
+      });
+  }
+
   devices?: Device[];
 
   constructor(private deviceRequisitionService: DeviceRequisitionService) {}
 
-  onSelect(selectedDevice: Device, selected: boolean) {
-    window.alert(
-      `O dispositivo ${selectedDevice.name} foi ${
-        selected ? 'selecionado' : 'desselecionado'
-      }`
-    );
-  }
-
-  ngOnInit(): void {
+  getDevices() {
     this.deviceRequisitionService.getDevices().subscribe({
       next: (devices) => (this.devices = devices),
       error: (error) => console.log('Erro ao buscar dados ', error),
     });
+  }
+
+  ngOnInit(): void {
+    this.getDevices();
   }
 }

@@ -18,13 +18,11 @@ export class DeviceDetailsComponent implements OnInit {
   ) {}
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;
-    const deviceNameFromRoute = routeParams.get('deviceName') || '';
-    this.deviceRequisitionService
-      .getDeviceByName(deviceNameFromRoute)
-      .subscribe({
-        next: (devices) => (this.device = devices.at(0)),
-        error: (error) => console.log('Erro ao buscar dados ', error),
-      });
+    const deviceIdFromRoute = routeParams.get('deviceId') || '';
+    this.deviceRequisitionService.getDeviceById(deviceIdFromRoute).subscribe({
+      next: (devices) => (this.device = devices.at(0)),
+      error: (error) => console.log('Erro ao buscar dados ', error),
+    });
   }
 
   onBackToList() {
