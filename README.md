@@ -6,6 +6,10 @@ Este projeto tem como objetivo implementar progressivamente e de forma didática
 
 O frontend da aplicação é desenvolvido com Angular e o backend é simulado pela implementação de uma API Fake, usando o JSON Server.
 
+## [Link do video](https://youtu.be/WhowfSt4ElU) - Apresentação do Projeto
+
+[![Link da Apresentação](https://img.youtube.com/vi/WhowfSt4ElU/0.jpg)](https://youtu.be/WhowfSt4ElU)
+
 ## [](https://github.com/asdias/aserdefinido---github-pages)Endereço de Deploy - GitHub Pages
 
 [https://github.com/asdiasx/automation-devices-catalog](https://github.com/asdiasx/automation-devices-catalog)
