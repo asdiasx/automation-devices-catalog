@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="page-title">Detalhes do dispositivo</h1>
+  <div class="text-block">
+    <div *ngIf="device">
+      <dl>
+        <dt>Nome:</dt>
+        <dd>{{ device.name | uppercase }}</dd>
+
+        <dt>Tipo:</dt>
+        <dd>{{ device.type }}</dd>
+
+        <dt>Localização:</dt>
+        <dd>{{ device.localization }}</dd>
+
+        <dt *ngIf="device.description">Descrição:</dt>
+        <dd>{{ device.description }}</dd>
+      </dl>
+    </div>
+  </div>
+  <button
+    mat-flat-button
+    type="button"
+    color="primary"
+    (click)="onBackToList()"
+  >
+    Voltar
+  </button>
+</div>

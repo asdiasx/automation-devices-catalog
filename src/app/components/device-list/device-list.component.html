@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="page-title">
+    <h1>Dispositivos</h1>
+    <p>* Clique no nome para detalhes</p>
+  </div>
+  <div class="list-wrapper">
+    <div *ngFor="let device of devices">
+      <div class="dev-item">
+        <h4>
+          <a
+            [title]="'Tipo: ' + device.type"
+            [routerLink]="['/devices', device.id]"
+          >
+            {{ device.name | uppercase }}
+          </a>
+        </h4>
+        <p class="info">Localização: {{ device.localization }}</p>
+        <div class="actions">
+          <button
+            mat-icon-button
+            color="primary"
+            routerLink="/devices/{{ device.id }}/edit"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="onDelete(device)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

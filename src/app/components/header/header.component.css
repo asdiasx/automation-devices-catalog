@@ -1,0 +1,30 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 2vw;
+}
+
+nav ul li a {
+  color: rgb(249, 199, 96);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: rgb(247, 150, 113);
+}
+
+.main-logo {
+  width: 160px;
+  border-radius: 8px;
+}

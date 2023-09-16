@@ -1,0 +1,65 @@
+<div class="container">
+  <h1 class="page-title">{{ title }}</h1>
+
+  <div class="form-group">
+    <form [formGroup]="deviceForm">
+      <fieldset>
+        <mat-form-field appearance="outline">
+          <mat-label>Nome</mat-label>
+          <input
+            matInput
+            formControlName="name"
+            [matTooltip]="getErrorMessage('name')"
+          />
+          <mat-error>{{ getErrorMessage("name") }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Tipo</mat-label>
+          <input
+            matInput
+            formControlName="type"
+            [matTooltip]="getErrorMessage('type')"
+          />
+          <mat-error>{{ getErrorMessage("type") }}.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Localização</mat-label>
+          <input
+            matInput
+            formControlName="localization"
+            [matTooltip]="getErrorMessage('localization')"
+          />
+          <mat-error>{{ getErrorMessage("localization") }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Descrição</mat-label>
+          <input
+            matInput
+            formControlName="description"
+            [matTooltip]="getErrorMessage('description')"
+          />
+          <mat-error>{{ getErrorMessage("description") }}</mat-error>
+        </mat-form-field>
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="btns">
+    <button mat-flat-button (click)="onCancel()" color="primary" type="button">
+      Voltar
+    </button>
+    <button
+      mat-flat-button
+      (click)="onSubmit()"
+      [disabled]="deviceForm.invalid"
+      color="primary"
+      cdkFocusInitial
+      type="button"
+    >
+      Salvar
+    </button>
+  </div>
+</div>
