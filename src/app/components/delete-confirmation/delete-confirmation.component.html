@@ -1,0 +1,17 @@
+<ng-container *ngIf="showEnabled">
+  <div class="modal">
+    <p>
+      <strong>Apagando o dispositivo {{ device.name }}.</strong>
+    </p>
+    <p><strong>Você está certo disso?</strong></p>
+    <div class="actions">
+      <button mat-raised-button color="primary" (click)="onCancel()">
+        Cancelar
+      </button>
+      <button mat-raised-button color="warn" (click)="onConfirm()">
+        Apagar
+      </button>
+    </div>
+  </div>
+  <div class="overlay" (click)="toggle()"></div>
+</ng-container>

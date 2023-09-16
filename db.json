@@ -5,14 +5,14 @@
       "name": "My-Device-1",
       "type": "light",
       "localization": "Living Room",
-      "description": "This is my light device on living room"
+      "description": "This is my light device on living room."
     },
     {
       "id": "2",
       "name": "My-Device-2",
       "type": "switch",
       "localization": "Living Room",
-      "description": "This is my switch device on living room"
+      "description": "This is my switch device on living room."
     }
   ]
 }

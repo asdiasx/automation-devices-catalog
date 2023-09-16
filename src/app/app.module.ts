@@ -22,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CreateDeviceComponent } from './components/create-device/create-device.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DeleteConfirmationComponent } from './components/delete-confirmation/delete-confirmation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     NotFoundComponent,
     CreateDeviceComponent,
+    DeleteConfirmationComponent,
   ],
   imports: [
     BrowserModule,
