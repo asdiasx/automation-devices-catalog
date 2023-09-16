@@ -33,7 +33,7 @@ O frontend da aplicação é desenvolvido com Angular e o backend é simulado pe
 - [x] Apresentar uma lista de dados com a diretiva estrutural ngFor.
 - [x] Usar a diretiva ngIf
 - [x] Formatar a apresentação de dados com Pipes.
-- [ ] Build e deploy da aplicação.
+- [x] Build e deploy da aplicação.
 
 ## [](https://github.com/utfpr-gp/roubank-app/blob/master/README.md#manual-de-execu%C3%A7%C3%A3o)Manual de execução
 
