@@ -11,7 +11,7 @@
             formControlName="name"
             [matTooltip]="getErrorMessage('name')"
           />
-          <mat-error>Deve ser um nome válido.</mat-error>
+          <mat-error>{{ getErrorMessage("name") }}</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -21,7 +21,7 @@
             formControlName="type"
             [matTooltip]="getErrorMessage('type')"
           />
-          <mat-error>Deve ser um tipo válido.</mat-error>
+          <mat-error>{{ getErrorMessage("type") }}.</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -31,7 +31,7 @@
             formControlName="localization"
             [matTooltip]="getErrorMessage('localization')"
           />
-          <mat-error>Deve ser uma localização válida.</mat-error>
+          <mat-error>{{ getErrorMessage("localization") }}</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -41,7 +41,7 @@
             formControlName="description"
             [matTooltip]="getErrorMessage('description')"
           />
-          <mat-error>Deve ter no máximo 100 caracteres.</mat-error>
+          <mat-error>{{ getErrorMessage("description") }}</mat-error>
         </mat-form-field>
       </fieldset>
     </form>

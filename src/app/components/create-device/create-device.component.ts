@@ -13,11 +13,8 @@ import { DeviceRequisitionService } from 'src/app/services/device-requisition.se
 export class CreateDeviceComponent implements OnInit {
   public id?: string;
   public title = 'Cadastrar Dispositivo';
-
   public errorMessage?: string;
-
   public deviceForm!: FormGroup;
-
   public savedDevice?: Device | undefined;
 
   constructor(
@@ -40,19 +37,22 @@ export class CreateDeviceComponent implements OnInit {
       id: new FormControl(),
       name: new FormControl(null, [
         Validators.required,
-        Validators.pattern('[\\w\\p{L}.]{5,15}'),
+        Validators.minLength(5),
+        Validators.maxLength(15),
+        Validators.pattern('^[a-zA-Z0-9_-]*$'),
       ]),
       type: new FormControl(null, [
         Validators.required,
-        Validators.pattern('[\\w\\p{L}.]{4,10}'),
+        Validators.minLength(4),
+        Validators.maxLength(10),
+        Validators.pattern('^[a-zA-Z0-9_. -]*$'),
       ]),
       localization: new FormControl(null, [
         Validators.required,
-        Validators.pattern('[\\w\\p{L}.]{4,20}'),
+        Validators.minLength(3),
+        Validators.maxLength(20),
       ]),
-      description: new FormControl(null, [
-        Validators.pattern('[\\s\\S]{0,100}'),
-      ]),
+      description: new FormControl(null, [Validators.maxLength(150)]),
     });
   }
 
@@ -71,10 +71,10 @@ export class CreateDeviceComponent implements OnInit {
   }
 
   public errorMessages: { [key: string]: string } = {
-    name: `O nome deve possuir entre 5 e 15 caracteres. Pode conter letras maiúsculas e minúsculas, números, sublinhados e pontos.`,
-    type: `O tipo deve possuir entre 4 e 10 caracteres. Pode conter letras maiúsculas e minúsculas, números, sublinhados e pontos.`,
-    location: `A localização deve possuir entre 4 e 20 caracteres.Pode conter letras maiúsculas e minúsculas, números, sublinhados e pontos.`,
-    description: `A descrição não é obrigatória mas deve possuir no máximo 100 caracteres. Pode conter qualqer tipo de caractere.`,
+    name: `O nome deve possuir entre 5 e 15 caracteres. Pode conter letras, números, sublinhados e hífens.`,
+    type: `O tipo deve possuir entre 4 e 10 caracteres. Pode conter letras, números, pontos, espaços, sublinhados e hífens.`,
+    localization: `A localização deve possuir entre 3 e 20 caracteres.`,
+    description: `A descrição não é obrigatória mas deve possuir no máximo 150 caracteres.`,
   };
 
   public getErrorMessage(field: string): string {
